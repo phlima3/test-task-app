@@ -1,50 +1,54 @@
-# Welcome to your Expo app 👋
+# 🎨 Random Background Color App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 👋 Hey there!
 
-## Get started
+Hello! My name is **Pedro**. I don’t know who you are, mysterious reviewer, but I’m honored to have you here evaluating my project. 🎩✨
 
-1. Install dependencies
+I imagine you’ve probably seen **way too many** test tasks, so I’ll try to make this one at least **a little less boring**. If at any point you feel like sighing deeply and questioning life choices, I promise it’s **not intentional**. (Or is it? 🤔)
 
-   ```bash
-   npm install
-   ```
+Anyway, let’s dive into this **amazing app that changes colors when you tap the screen** – I know, it’s revolutionary. 😆
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## 📌 About the Project
 
-In the output, you'll find options to open the app in a
+This is a simple **React Native** app built with **Expo**, where:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Tapping the screen **changes the background color randomly**
+- It **saves a history of colors** so you can relive past choices (because nostalgia is important)
+- You can **select a color from history** and set it as the background
+- There’s a **reset button** in case you regret everything 😅
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Oh, and yes, it works! No bugs, no magic tricks – just **pure, functional React Native sorcery**. 🔥
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🎨 How Are Colors Generated?
 
-```bash
-npm run reset-project
+I used a **random RGB generator** that I found on **Stack Overflow** because, let’s be honest, **99% of programming is Stack Overflow & Google**.  
+🔗 [Reference](https://stackoverflow.com/questions/23095637/how-do-you-get-random-rgb-in-javascript)
+
+```ts
+const randomBetween = (min: number, max: number) =>
+  min + Math.floor(Math.random() * (max - min + 1));
+
+const getRandomColor = () => {
+  const r = randomBetween(0, 255);
+  const g = randomBetween(0, 255);
+  const b = randomBetween(0, 255);
+  return `rgb(${r},${g},${b})`;
+};
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🛠️ Technologies Used
 
-## Learn more
+- React Native - Because native apps are cool
+- Expo - Because setting up a full React Native project from scratch is painful
+- FlashList - Because performance matters
+- TypeScript - Because I enjoy catching errors before they break production
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🧐 Design Decisions
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Minimalist UI → Since no Figma design was provided, I used my best judgment to make it intuitive.
+- History limited to 20 colors → Because memory is precious.
+- Automatic text color adjustment → To prevent text from disappearing into the background like a ninja.
