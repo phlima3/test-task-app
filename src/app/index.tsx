@@ -17,9 +17,14 @@ export default function HomeScreen() {
   const changeBackgroundColor = () => {
     const newColor = getRandomColor();
     setBgColor(newColor);
-    setTapCount((prevCount) => prevCount + 1);
+    setTapCount((prevCount) => (prevCount < 20 ? prevCount + 1 : prevCount));
 
-    setPastColors((prevColors) => [bgColor, ...prevColors].slice(0, 20));
+    setPastColors((prevColors) => {
+      if (prevColors.length < 20) {
+        return [bgColor, ...prevColors];
+      }
+      return prevColors;
+    });
   };
 
   const choosePreviousColor = (color: string) => {
