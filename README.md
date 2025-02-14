@@ -52,3 +52,11 @@ const getRandomColor = () => {
 - Minimalist UI → Since no Figma design was provided, I used my best judgment to make it intuitive.
 - History limited to 20 colors → Because memory is precious.
 - Automatic text color adjustment → To prevent text from disappearing into the background like a ninja.
+
+## 📸 Pictures
+<img width="340" alt="image" src="https://github.com/user-attachments/assets/821b7890-0283-441f-b1c9-7a7a4f264a3b" />
+<img width="340" alt="image" src="https://github.com/user-attachments/assets/f1f79610-ca61-415e-88ab-a4c0dba8cca4" />
+<img width="340" alt="image" src="https://github.com/user-attachments/assets/e3895525-75ae-4076-b3a9-664dc5a15faa" />
+
+
+
